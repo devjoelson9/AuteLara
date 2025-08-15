@@ -1,6 +1,5 @@
 <x-app-layout>
     <style>
-        /* Estilos específicos para a Home, se precisar */
         .home-section {
             background-color: #ffffff;
             border: 1px solid #e0e0e0;
@@ -34,9 +33,9 @@
         .home-cta a:hover {
             background-color: #0056b3;
         }
-        .home-cta a + a { /* Estilo para o segundo botão, se houver */
+        .home-cta a + a { 
             margin-left: 15px;
-            background-color: #6c757d; /* Cor secundária */
+            background-color: #6c757d; 
         }
         .home-cta a + a:hover {
             background-color: #5a6268;
@@ -47,7 +46,7 @@
         <h1>Bem-vindo à Sua Aplicação!</h1>
 
         @if ($userName)
-            <p>Olá, **{{ $userName }}**! É ótimo ter você de volta.</p>
+            <p>Olá, {{ $userName }}! É ótimo ter você de volta.</p>
             <div class="home-cta">
                 <a href="{{ route('dashboard') }}">Ir para o Dashboard</a>
             </div>

@@ -12,11 +12,6 @@ class AuthController extends Controller{
         return view('login');
     }
 
-    public function listaUsers(){
-        $totalUsers = User::count();
-        return view('dashboard', compact('totalUsers'));
-    }
-
     public function loginAttempt(Request $request){
         $credentials = $request->validate([
             'email' => 'required|email',

@@ -69,13 +69,28 @@
         </div>
 
         <div class="dashboard-card">
-            <h3>Outra Métrica</h3>
-
-            
+            <h3>Outra Métrica</h3>            
             <p class="metric">42</p>
             <p style="font-size: 0.9em; color: #666;">Exemplo de dado</p>
         </div>
     </div>
+
+    @isset($users)
+        <div class="dashboard-section">
+            <h3>Todos os Usuários Cadastrados</h3>
+            <ul class="user-full-list">
+                @forelse ($users as $user)
+                    <li>
+                        <span> nome: {{ $user->name }}</span> </br>
+                        <span>Email: {{ $user->email }}</span></br>
+                        <span>ID: {{ $user->id }}</span></br>
+                    </li>
+                @empty
+                    <li>Nenhum usuário encontrado no sistema.</li>
+                @endforelse
+            </ul>
+        </div>
+    @endisset
 
     @isset($latestUsers)
         <div class="dashboard-section">

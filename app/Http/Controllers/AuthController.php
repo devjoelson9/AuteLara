@@ -50,4 +50,12 @@ class AuthController extends Controller{
 
         return redirect('/login')->with('success', 'Cadastro realizado com sucesso!');
     }
+
+    public function logout(Request $request){
+        Auth::logout(); 
+
+        $request->session()->invalidate(); 
+        $request->session()->regenerateToken(); 
+        return redirect('/')->with('status', 'Você foi desconectado com sucesso!'); 
+    }
 }

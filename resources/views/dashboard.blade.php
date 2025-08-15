@@ -59,7 +59,7 @@
 
     <h2>Dashboard</h2>
 
-    <p>olá <b>{{ Auth::user()->name }}</b> Bem-vindo ao seu painel de controle!</p>
+    <p>Olá <b>{{ Auth::user()->name }}</b> Bem-vindo ao seu painel de controle!</p>
 
     <div class="dashboard-grid">
         <div class="dashboard-card">
@@ -106,12 +106,4 @@
             </ul>
         </div>
     @endisset
-
-    <div class="dashboard-section">
-        <h3>Ações Rápidas</h3>
-        <p>Aqui você pode adicionar links ou botões para as funcionalidades mais importantes do seu sistema.</p>
-        <button onclick="alert('Funcionalidade ainda não implementada!');">Gerenciar Conteúdo</button>
-        <button style="background-color: #dc3545;" onclick="alert('Funcionalidade ainda não implementada!');">Relatórios</button>
-    </div>
-
 </x-app-layout>

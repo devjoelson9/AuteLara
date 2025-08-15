@@ -1,6 +1,5 @@
 <x-app-layout>
     <style>
-        /* Estilos específicos do dashboard, se precisar de algo além do layout base */
         .dashboard-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -24,7 +23,7 @@
         .dashboard-card p.metric {
             font-size: 2.5em;
             font-weight: bold;
-            color: #007bff; /* Azul primário para os valores */
+            color: #007bff;
             margin: 10px 0;
         }
         .dashboard-section {
